@@ -97,7 +97,7 @@ void prepareNewGame() {
 }
 
 void readUserResponse() {
-  int response = checaRespostaJogador();
+  int response = checkPlayerAnswer();
 
   if (response == UNDEFINED_LED) {
     return;
@@ -131,7 +131,7 @@ void switchRoundLeds() {
   }
 }
 
-int checaRespostaJogador() {
+int checkPlayerAnswer() {
   if (digitalRead(YELLOW_BUTTON) == LOW) {
     return blinkLed(YELLOW_LED);
   }
